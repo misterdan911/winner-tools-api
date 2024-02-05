@@ -1,0 +1,1429 @@
+[{
+        "iso": 1004,
+        "iso_ccode": "AF",
+        "iso_prefix": 93,
+        "name": "Afghanistan"
+    },
+    {
+        "iso": 1008,
+        "iso_ccode": "AL",
+        "iso_prefix": 355,
+        "name": "Albania"
+    },
+    {
+        "iso": 1012,
+        "iso_ccode": "DZ",
+        "iso_prefix": 213,
+        "name": "Algeria"
+    },
+    {
+        "iso": 1016,
+        "iso_ccode": "AS",
+        "iso_prefix": 1684,
+        "name": "American Samoa"
+    },
+    {
+        "iso": 1020,
+        "iso_ccode": "AD",
+        "iso_prefix": 376,
+        "name": "Andorra"
+    },
+    {
+        "iso": 1024,
+        "iso_ccode": "AO",
+        "iso_prefix": 244,
+        "name": "Angola"
+    },
+    {
+        "iso": 1660,
+        "iso_ccode": "AI",
+        "iso_prefix": 1264,
+        "name": "Anguilla"
+    },
+    {
+        "iso": 1010,
+        "iso_ccode": "AQ",
+        "iso_prefix": 672,
+        "name": "Antarctica"
+    },
+    {
+        "iso": 1028,
+        "iso_ccode": "AG",
+        "iso_prefix": 1268,
+        "name": "Antigua and Barbuda"
+    },
+    {
+        "iso": 1032,
+        "iso_ccode": "AR",
+        "iso_prefix": 54,
+        "name": "Argentina"
+    },
+    {
+        "iso": 1051,
+        "iso_ccode": "AM",
+        "iso_prefix": 374,
+        "name": "Armenia"
+    },
+    {
+        "iso": 1533,
+        "iso_ccode": "AW",
+        "iso_prefix": 297,
+        "name": "Aruba"
+    },
+    {
+        "iso": 1036,
+        "iso_ccode": "AU",
+        "iso_prefix": 61,
+        "name": "Australia"
+    },
+    {
+        "iso": 1040,
+        "iso_ccode": "AT",
+        "iso_prefix": 43,
+        "name": "Austria"
+    },
+    {
+        "iso": 1031,
+        "iso_ccode": "AZ",
+        "iso_prefix": 994,
+        "name": "Azerbaijan"
+    },
+    {
+        "iso": 1044,
+        "iso_ccode": "BS",
+        "iso_prefix": 1242,
+        "name": "Bahamas"
+    },
+    {
+        "iso": 1048,
+        "iso_ccode": "BH",
+        "iso_prefix": 973,
+        "name": "Bahrain"
+    },
+    {
+        "iso": 1050,
+        "iso_ccode": "BD",
+        "iso_prefix": 880,
+        "name": "Bangladesh"
+    },
+    {
+        "iso": 1052,
+        "iso_ccode": "BB",
+        "iso_prefix": 1246,
+        "name": "Barbados"
+    },
+    {
+        "iso": 1112,
+        "iso_ccode": "BY",
+        "iso_prefix": 375,
+        "name": "Belarus"
+    },
+    {
+        "iso": 1056,
+        "iso_ccode": "BE",
+        "iso_prefix": 32,
+        "name": "Belgium"
+    },
+    {
+        "iso": 1084,
+        "iso_ccode": "BZ",
+        "iso_prefix": 501,
+        "name": "Belize"
+    },
+    {
+        "iso": 1204,
+        "iso_ccode": "BJ",
+        "iso_prefix": 229,
+        "name": "Benin"
+    },
+    {
+        "iso": 1060,
+        "iso_ccode": "BM",
+        "iso_prefix": 1441,
+        "name": "Bermuda"
+    },
+    {
+        "iso": 1064,
+        "iso_ccode": "BT",
+        "iso_prefix": 975,
+        "name": "Bhutan"
+    },
+    {
+        "iso": 1068,
+        "iso_ccode": "BO",
+        "iso_prefix": 591,
+        "name": "Bolivia"
+    },
+    {
+        "iso": 1070,
+        "iso_ccode": "BA",
+        "iso_prefix": 387,
+        "name": "Bosnia and Herzegovina"
+    },
+    {
+        "iso": 1072,
+        "iso_ccode": "BW",
+        "iso_prefix": 267,
+        "name": "Botswana"
+    },
+    {
+        "iso": 1076,
+        "iso_ccode": "BR",
+        "iso_prefix": 55,
+        "name": "Brazil"
+    },
+    {
+        "iso": 1086,
+        "iso_ccode": "IO",
+        "iso_prefix": 246,
+        "name": "British Indian Ocean Territory"
+    },
+    {
+        "iso": 1092,
+        "iso_ccode": "VG",
+        "iso_prefix": 1284,
+        "name": "British Virgin Islands"
+    },
+    {
+        "iso": 1096,
+        "iso_ccode": "BN",
+        "iso_prefix": 673,
+        "name": "Brunei"
+    },
+    {
+        "iso": 1100,
+        "iso_ccode": "BG",
+        "iso_prefix": 359,
+        "name": "Bulgaria"
+    },
+    {
+        "iso": 1854,
+        "iso_ccode": "BF",
+        "iso_prefix": 226,
+        "name": "Burkina Faso"
+    },
+    {
+        "iso": 1108,
+        "iso_ccode": "BI",
+        "iso_prefix": 257,
+        "name": "Burundi"
+    },
+    {
+        "iso": 1116,
+        "iso_ccode": "KH",
+        "iso_prefix": 855,
+        "name": "Cambodia"
+    },
+    {
+        "iso": 1120,
+        "iso_ccode": "CM",
+        "iso_prefix": 237,
+        "name": "Cameroon"
+    },
+    {
+        "iso": 1124,
+        "iso_ccode": "CA",
+        "iso_prefix": 1,
+        "name": "Canada"
+    },
+    {
+        "iso": 1132,
+        "iso_ccode": "CV",
+        "iso_prefix": 238,
+        "name": "Cape Verde"
+    },
+    {
+        "iso": 1136,
+        "iso_ccode": "KY",
+        "iso_prefix": 1345,
+        "name": "Cayman Islands"
+    },
+    {
+        "iso": 1140,
+        "iso_ccode": "CF",
+        "iso_prefix": 236,
+        "name": "Central African Republic"
+    },
+    {
+        "iso": 1148,
+        "iso_ccode": "TD",
+        "iso_prefix": 235,
+        "name": "Chad"
+    },
+    {
+        "iso": 1152,
+        "iso_ccode": "CL",
+        "iso_prefix": 56,
+        "name": "Chile"
+    },
+    {
+        "iso": 1156,
+        "iso_ccode": "CN",
+        "iso_prefix": 86,
+        "name": "China"
+    },
+    {
+        "iso": 1162,
+        "iso_ccode": "CX",
+        "iso_prefix": 61,
+        "name": "Christmas Island"
+    },
+    {
+        "iso": 1166,
+        "iso_ccode": "CC",
+        "iso_prefix": 61,
+        "name": "Cocos Islands"
+    },
+    {
+        "iso": 1170,
+        "iso_ccode": "CO",
+        "iso_prefix": 57,
+        "name": "Colombia"
+    },
+    {
+        "iso": 1174,
+        "iso_ccode": "KM",
+        "iso_prefix": 269,
+        "name": "Comoros"
+    },
+    {
+        "iso": 1184,
+        "iso_ccode": "CK",
+        "iso_prefix": 682,
+        "name": "Cook Islands"
+    },
+    {
+        "iso": 1188,
+        "iso_ccode": "CR",
+        "iso_prefix": 506,
+        "name": "Costa Rica"
+    },
+    {
+        "iso": 1191,
+        "iso_ccode": "HR",
+        "iso_prefix": 385,
+        "name": "Croatia"
+    },
+    {
+        "iso": 1192,
+        "iso_ccode": "CU",
+        "iso_prefix": 53,
+        "name": "Cuba"
+    },
+    {
+        "iso": 1531,
+        "iso_ccode": "CW",
+        "iso_prefix": 599,
+        "name": "Curacao"
+    },
+    {
+        "iso": 1196,
+        "iso_ccode": "CY",
+        "iso_prefix": 357,
+        "name": "Cyprus"
+    },
+    {
+        "iso": 1203,
+        "iso_ccode": "CZ",
+        "iso_prefix": 420,
+        "name": "Czech Republic"
+    },
+    {
+        "iso": 1180,
+        "iso_ccode": "CD",
+        "iso_prefix": 243,
+        "name": "Democratic Republic of the Congo"
+    },
+    {
+        "iso": 1208,
+        "iso_ccode": "DK",
+        "iso_prefix": 45,
+        "name": "Denmark"
+    },
+    {
+        "iso": 1262,
+        "iso_ccode": "DJ",
+        "iso_prefix": 253,
+        "name": "Djibouti"
+    },
+    {
+        "iso": 1212,
+        "iso_ccode": "DM",
+        "iso_prefix": 1767,
+        "name": "Dominica"
+    },
+    {
+        "iso": 1214,
+        "iso_ccode": "DO",
+        "iso_prefix": 1809,
+        "name": "Dominican Republic"
+    },
+    {
+        "iso": 1626,
+        "iso_ccode": "TL",
+        "iso_prefix": 670,
+        "name": "East Timor"
+    },
+    {
+        "iso": 1218,
+        "iso_ccode": "EC",
+        "iso_prefix": 593,
+        "name": "Ecuador"
+    },
+    {
+        "iso": 1818,
+        "iso_ccode": "EG",
+        "iso_prefix": 20,
+        "name": "Egypt"
+    },
+    {
+        "iso": 1222,
+        "iso_ccode": "SV",
+        "iso_prefix": 503,
+        "name": "El Salvador"
+    },
+    {
+        "iso": 1226,
+        "iso_ccode": "GQ",
+        "iso_prefix": 240,
+        "name": "Equatorial Guinea"
+    },
+    {
+        "iso": 1232,
+        "iso_ccode": "ER",
+        "iso_prefix": 291,
+        "name": "Eritrea"
+    },
+    {
+        "iso": 1233,
+        "iso_ccode": "EE",
+        "iso_prefix": 372,
+        "name": "Estonia"
+    },
+    {
+        "iso": 1231,
+        "iso_ccode": "ET",
+        "iso_prefix": 251,
+        "name": "Ethiopia"
+    },
+    {
+        "iso": 1238,
+        "iso_ccode": "FK",
+        "iso_prefix": 500,
+        "name": "Falkland Islands"
+    },
+    {
+        "iso": 1234,
+        "iso_ccode": "FO",
+        "iso_prefix": 298,
+        "name": "Faroe Islands"
+    },
+    {
+        "iso": 1242,
+        "iso_ccode": "FJ",
+        "iso_prefix": 679,
+        "name": "Fiji"
+    },
+    {
+        "iso": 1246,
+        "iso_ccode": "FI",
+        "iso_prefix": 358,
+        "name": "Finland"
+    },
+    {
+        "iso": 1250,
+        "iso_ccode": "FR",
+        "iso_prefix": 33,
+        "name": "France"
+    },
+    {
+        "iso": 1258,
+        "iso_ccode": "PF",
+        "iso_prefix": 689,
+        "name": "French Polynesia"
+    },
+    {
+        "iso": 1266,
+        "iso_ccode": "GA",
+        "iso_prefix": 241,
+        "name": "Gabon"
+    },
+    {
+        "iso": 1270,
+        "iso_ccode": "GM",
+        "iso_prefix": 220,
+        "name": "Gambia"
+    },
+    {
+        "iso": 1268,
+        "iso_ccode": "GE",
+        "iso_prefix": 995,
+        "name": "Georgia"
+    },
+    {
+        "iso": 1276,
+        "iso_ccode": "DE",
+        "iso_prefix": 49,
+        "name": "Germany"
+    },
+    {
+        "iso": 1288,
+        "iso_ccode": "GH",
+        "iso_prefix": 233,
+        "name": "Ghana"
+    },
+    {
+        "iso": 1292,
+        "iso_ccode": "GI",
+        "iso_prefix": 350,
+        "name": "Gibraltar"
+    },
+    {
+        "iso": 1300,
+        "iso_ccode": "GR",
+        "iso_prefix": 30,
+        "name": "Greece"
+    },
+    {
+        "iso": 1304,
+        "iso_ccode": "GL",
+        "iso_prefix": 299,
+        "name": "Greenland"
+    },
+    {
+        "iso": 1308,
+        "iso_ccode": "GD",
+        "iso_prefix": 1473,
+        "name": "Grenada"
+    },
+    {
+        "iso": 1316,
+        "iso_ccode": "GU",
+        "iso_prefix": 1671,
+        "name": "Guam"
+    },
+    {
+        "iso": 1320,
+        "iso_ccode": "GT",
+        "iso_prefix": 502,
+        "name": "Guatemala"
+    },
+    {
+        "iso": 1831,
+        "iso_ccode": "GG",
+        "iso_prefix": 441481,
+        "name": "Guernsey"
+    },
+    {
+        "iso": 1324,
+        "iso_ccode": "GN",
+        "iso_prefix": 224,
+        "name": "Guinea"
+    },
+    {
+        "iso": 1624,
+        "iso_ccode": "GW",
+        "iso_prefix": 245,
+        "name": "Guinea-Bissau"
+    },
+    {
+        "iso": 1328,
+        "iso_ccode": "GY",
+        "iso_prefix": 592,
+        "name": "Guyana"
+    },
+    {
+        "iso": 1332,
+        "iso_ccode": "HT",
+        "iso_prefix": 509,
+        "name": "Haiti"
+    },
+    {
+        "iso": 1340,
+        "iso_ccode": "HN",
+        "iso_prefix": 504,
+        "name": "Honduras"
+    },
+    {
+        "iso": 1344,
+        "iso_ccode": "HK",
+        "iso_prefix": 852,
+        "name": "Hong Kong"
+    },
+    {
+        "iso": 1348,
+        "iso_ccode": "HU",
+        "iso_prefix": 36,
+        "name": "Hungary"
+    },
+    {
+        "iso": 1352,
+        "iso_ccode": "IS",
+        "iso_prefix": 354,
+        "name": "Iceland"
+    },
+    {
+        "iso": 1356,
+        "iso_ccode": "IN",
+        "iso_prefix": 91,
+        "name": "India"
+    },
+    {
+        "iso": 1360,
+        "iso_ccode": "ID",
+        "iso_prefix": 62,
+        "name": "Indonesia"
+    },
+    {
+        "iso": 1364,
+        "iso_ccode": "IR",
+        "iso_prefix": 98,
+        "name": "Iran"
+    },
+    {
+        "iso": 1368,
+        "iso_ccode": "IQ",
+        "iso_prefix": 964,
+        "name": "Iraq"
+    },
+    {
+        "iso": 1372,
+        "iso_ccode": "IE",
+        "iso_prefix": 353,
+        "name": "Ireland"
+    },
+    {
+        "iso": 1833,
+        "iso_ccode": "IM",
+        "iso_prefix": 441624,
+        "name": "Isle of Man"
+    },
+    {
+        "iso": 1376,
+        "iso_ccode": "IL",
+        "iso_prefix": 972,
+        "name": "Israel"
+    },
+    {
+        "iso": 1380,
+        "iso_ccode": "IT",
+        "iso_prefix": 39,
+        "name": "Italy"
+    },
+    {
+        "iso": 1384,
+        "iso_ccode": "CI",
+        "iso_prefix": 225,
+        "name": "Ivory Coast"
+    },
+    {
+        "iso": 1388,
+        "iso_ccode": "JM",
+        "iso_prefix": 1876,
+        "name": "Jamaica"
+    },
+    {
+        "iso": 1392,
+        "iso_ccode": "JP",
+        "iso_prefix": 81,
+        "name": "Japan"
+    },
+    {
+        "iso": 1832,
+        "iso_ccode": "JE",
+        "iso_prefix": 441534,
+        "name": "Jersey"
+    },
+    {
+        "iso": 1400,
+        "iso_ccode": "JO",
+        "iso_prefix": 962,
+        "name": "Jordan"
+    },
+    {
+        "iso": 1398,
+        "iso_ccode": "KZ",
+        "iso_prefix": 7,
+        "name": "Kazakhstan"
+    },
+    {
+        "iso": 1404,
+        "iso_ccode": "KE",
+        "iso_prefix": 254,
+        "name": "Kenya"
+    },
+    {
+        "iso": 1296,
+        "iso_ccode": "KI",
+        "iso_prefix": 686,
+        "name": "Kiribati"
+    },
+    {
+        "iso": 1414,
+        "iso_ccode": "KW",
+        "iso_prefix": 965,
+        "name": "Kuwait"
+    },
+    {
+        "iso": 1417,
+        "iso_ccode": "KG",
+        "iso_prefix": 996,
+        "name": "Kyrgyzstan"
+    },
+    {
+        "iso": 1418,
+        "iso_ccode": "LA",
+        "iso_prefix": 856,
+        "name": "Laos"
+    },
+    {
+        "iso": 1428,
+        "iso_ccode": "LV",
+        "iso_prefix": 371,
+        "name": "Latvia"
+    },
+    {
+        "iso": 1422,
+        "iso_ccode": "LB",
+        "iso_prefix": 961,
+        "name": "Lebanon"
+    },
+    {
+        "iso": 1426,
+        "iso_ccode": "LS",
+        "iso_prefix": 266,
+        "name": "Lesotho"
+    },
+    {
+        "iso": 1430,
+        "iso_ccode": "LR",
+        "iso_prefix": 231,
+        "name": "Liberia"
+    },
+    {
+        "iso": 1434,
+        "iso_ccode": "LY",
+        "iso_prefix": 218,
+        "name": "Libya"
+    },
+    {
+        "iso": 1438,
+        "iso_ccode": "LI",
+        "iso_prefix": 423,
+        "name": "Liechtenstein"
+    },
+    {
+        "iso": 1440,
+        "iso_ccode": "LT",
+        "iso_prefix": 370,
+        "name": "Lithuania"
+    },
+    {
+        "iso": 1442,
+        "iso_ccode": "LU",
+        "iso_prefix": 352,
+        "name": "Luxembourg"
+    },
+    {
+        "iso": 1446,
+        "iso_ccode": "MO",
+        "iso_prefix": 853,
+        "name": "Macau"
+    },
+    {
+        "iso": 1807,
+        "iso_ccode": "MK",
+        "iso_prefix": 389,
+        "name": "Macedonia"
+    },
+    {
+        "iso": 1450,
+        "iso_ccode": "MG",
+        "iso_prefix": 261,
+        "name": "Madagascar"
+    },
+    {
+        "iso": 1454,
+        "iso_ccode": "MW",
+        "iso_prefix": 265,
+        "name": "Malawi"
+    },
+    {
+        "iso": 1458,
+        "iso_ccode": "MY",
+        "iso_prefix": 60,
+        "name": "Malaysia"
+    },
+    {
+        "iso": 1462,
+        "iso_ccode": "MV",
+        "iso_prefix": 960,
+        "name": "Maldives"
+    },
+    {
+        "iso": 1466,
+        "iso_ccode": "ML",
+        "iso_prefix": 223,
+        "name": "Mali"
+    },
+    {
+        "iso": 1470,
+        "iso_ccode": "MT",
+        "iso_prefix": 356,
+        "name": "Malta"
+    },
+    {
+        "iso": 1584,
+        "iso_ccode": "MH",
+        "iso_prefix": 692,
+        "name": "Marshall Islands"
+    },
+    {
+        "iso": 1478,
+        "iso_ccode": "MR",
+        "iso_prefix": 222,
+        "name": "Mauritania"
+    },
+    {
+        "iso": 1480,
+        "iso_ccode": "MU",
+        "iso_prefix": 230,
+        "name": "Mauritius"
+    },
+    {
+        "iso": 1175,
+        "iso_ccode": "YT",
+        "iso_prefix": 262,
+        "name": "Mayotte"
+    },
+    {
+        "iso": 1484,
+        "iso_ccode": "MX",
+        "iso_prefix": 52,
+        "name": "Mexico"
+    },
+    {
+        "iso": 1583,
+        "iso_ccode": "FM",
+        "iso_prefix": 691,
+        "name": "Micronesia"
+    },
+    {
+        "iso": 1498,
+        "iso_ccode": "MD",
+        "iso_prefix": 373,
+        "name": "Moldova"
+    },
+    {
+        "iso": 1492,
+        "iso_ccode": "MC",
+        "iso_prefix": 377,
+        "name": "Monaco"
+    },
+    {
+        "iso": 1496,
+        "iso_ccode": "MN",
+        "iso_prefix": 976,
+        "name": "Mongolia"
+    },
+    {
+        "iso": 1499,
+        "iso_ccode": "ME",
+        "iso_prefix": 382,
+        "name": "Montenegro"
+    },
+    {
+        "iso": 1500,
+        "iso_ccode": "MS",
+        "iso_prefix": 1664,
+        "name": "Montserrat"
+    },
+    {
+        "iso": 1504,
+        "iso_ccode": "MA",
+        "iso_prefix": 212,
+        "name": "Morocco"
+    },
+    {
+        "iso": 1508,
+        "iso_ccode": "MZ",
+        "iso_prefix": 258,
+        "name": "Mozambique"
+    },
+    {
+        "iso": 1104,
+        "iso_ccode": "MM",
+        "iso_prefix": 95,
+        "name": "Myanmar"
+    },
+    {
+        "iso": 1516,
+        "iso_ccode": "NA",
+        "iso_prefix": 264,
+        "name": "Namibia"
+    },
+    {
+        "iso": 1520,
+        "iso_ccode": "NR",
+        "iso_prefix": 674,
+        "name": "Nauru"
+    },
+    {
+        "iso": 1524,
+        "iso_ccode": "NP",
+        "iso_prefix": 977,
+        "name": "Nepal"
+    },
+    {
+        "iso": 1528,
+        "iso_ccode": "NL",
+        "iso_prefix": 31,
+        "name": "Netherlands"
+    },
+    {
+        "iso": 1540,
+        "iso_ccode": "NC",
+        "iso_prefix": 687,
+        "name": "New Caledonia"
+    },
+    {
+        "iso": 1554,
+        "iso_ccode": "NZ",
+        "iso_prefix": 64,
+        "name": "New Zealand"
+    },
+    {
+        "iso": 1558,
+        "iso_ccode": "NI",
+        "iso_prefix": 505,
+        "name": "Nicaragua"
+    },
+    {
+        "iso": 1562,
+        "iso_ccode": "NE",
+        "iso_prefix": 227,
+        "name": "Niger"
+    },
+    {
+        "iso": 1566,
+        "iso_ccode": "NG",
+        "iso_prefix": 234,
+        "name": "Nigeria"
+    },
+    {
+        "iso": 1570,
+        "iso_ccode": "NU",
+        "iso_prefix": 683,
+        "name": "Niue"
+    },
+    {
+        "iso": 1408,
+        "iso_ccode": "KP",
+        "iso_prefix": 850,
+        "name": "North Korea"
+    },
+    {
+        "iso": 1580,
+        "iso_ccode": "MP",
+        "iso_prefix": 1670,
+        "name": "Northern Mariana Islands"
+    },
+    {
+        "iso": 1578,
+        "iso_ccode": "NO",
+        "iso_prefix": 47,
+        "name": "Norway"
+    },
+    {
+        "iso": 1512,
+        "iso_ccode": "OM",
+        "iso_prefix": 968,
+        "name": "Oman"
+    },
+    {
+        "iso": 1586,
+        "iso_ccode": "PK",
+        "iso_prefix": 92,
+        "name": "Pakistan"
+    },
+    {
+        "iso": 1585,
+        "iso_ccode": "PW",
+        "iso_prefix": 680,
+        "name": "Palau"
+    },
+    {
+        "iso": 1275,
+        "iso_ccode": "PS",
+        "iso_prefix": 970,
+        "name": "Palestine"
+    },
+    {
+        "iso": 1591,
+        "iso_ccode": "PA",
+        "iso_prefix": 507,
+        "name": "Panama"
+    },
+    {
+        "iso": 1598,
+        "iso_ccode": "PG",
+        "iso_prefix": 675,
+        "name": "Papua New Guinea"
+    },
+    {
+        "iso": 1600,
+        "iso_ccode": "PY",
+        "iso_prefix": 595,
+        "name": "Paraguay"
+    },
+    {
+        "iso": 1604,
+        "iso_ccode": "PE",
+        "iso_prefix": 51,
+        "name": "Peru"
+    },
+    {
+        "iso": 1608,
+        "iso_ccode": "PH",
+        "iso_prefix": 63,
+        "name": "Philippines"
+    },
+    {
+        "iso": 1612,
+        "iso_ccode": "PN",
+        "iso_prefix": 64,
+        "name": "Pitcairn"
+    },
+    {
+        "iso": 1616,
+        "iso_ccode": "PL",
+        "iso_prefix": 48,
+        "name": "Poland"
+    },
+    {
+        "iso": 1620,
+        "iso_ccode": "PT",
+        "iso_prefix": 351,
+        "name": "Portugal"
+    },
+    {
+        "iso": 1630,
+        "iso_ccode": "PR",
+        "iso_prefix": 1787,
+        "name": "Puerto Rico"
+    },
+    {
+        "iso": 1634,
+        "iso_ccode": "QA",
+        "iso_prefix": 974,
+        "name": "Qatar"
+    },
+    {
+        "iso": 1178,
+        "iso_ccode": "CG",
+        "iso_prefix": 242,
+        "name": "Republic of the Congo"
+    },
+    {
+        "iso": 1638,
+        "iso_ccode": "RE",
+        "iso_prefix": 262,
+        "name": "Reunion"
+    },
+    {
+        "iso": 1642,
+        "iso_ccode": "RO",
+        "iso_prefix": 40,
+        "name": "Romania"
+    },
+    {
+        "iso": 1643,
+        "iso_ccode": "RU",
+        "iso_prefix": 7,
+        "name": "Russia"
+    },
+    {
+        "iso": 1646,
+        "iso_ccode": "RW",
+        "iso_prefix": 250,
+        "name": "Rwanda"
+    },
+    {
+        "iso": 1652,
+        "iso_ccode": "BL",
+        "iso_prefix": 590,
+        "name": "Saint Barthelemy"
+    },
+    {
+        "iso": 1654,
+        "iso_ccode": "SH",
+        "iso_prefix": 290,
+        "name": "Saint Helena"
+    },
+    {
+        "iso": 1659,
+        "iso_ccode": "KN",
+        "iso_prefix": 1869,
+        "name": "Saint Kitts and Nevis"
+    },
+    {
+        "iso": 1662,
+        "iso_ccode": "LC",
+        "iso_prefix": 1758,
+        "name": "Saint Lucia"
+    },
+    {
+        "iso": 1663,
+        "iso_ccode": "MF",
+        "iso_prefix": 590,
+        "name": "Saint Martin"
+    },
+    {
+        "iso": 1666,
+        "iso_ccode": "PM",
+        "iso_prefix": 508,
+        "name": "Saint Pierre and Miquelon"
+    },
+    {
+        "iso": 1670,
+        "iso_ccode": "VC",
+        "iso_prefix": 1784,
+        "name": "Saint Vincent and the Grenadines"
+    },
+    {
+        "iso": 1882,
+        "iso_ccode": "WS",
+        "iso_prefix": 685,
+        "name": "Samoa"
+    },
+    {
+        "iso": 1674,
+        "iso_ccode": "SM",
+        "iso_prefix": 378,
+        "name": "San Marino"
+    },
+    {
+        "iso": 1678,
+        "iso_ccode": "ST",
+        "iso_prefix": 239,
+        "name": "Sao Tome and Principe"
+    },
+    {
+        "iso": 1682,
+        "iso_ccode": "SA",
+        "iso_prefix": 966,
+        "name": "Saudi Arabia"
+    },
+    {
+        "iso": 1686,
+        "iso_ccode": "SN",
+        "iso_prefix": 221,
+        "name": "Senegal"
+    },
+    {
+        "iso": 1688,
+        "iso_ccode": "RS",
+        "iso_prefix": 381,
+        "name": "Serbia"
+    },
+    {
+        "iso": 1690,
+        "iso_ccode": "SC",
+        "iso_prefix": 248,
+        "name": "Seychelles"
+    },
+    {
+        "iso": 1694,
+        "iso_ccode": "SL",
+        "iso_prefix": 232,
+        "name": "Sierra Leone"
+    },
+    {
+        "iso": 1702,
+        "iso_ccode": "SG",
+        "iso_prefix": 65,
+        "name": "Singapore"
+    },
+    {
+        "iso": 1534,
+        "iso_ccode": "SX",
+        "iso_prefix": 1721,
+        "name": "Sint Maarten"
+    },
+    {
+        "iso": 1703,
+        "iso_ccode": "SK",
+        "iso_prefix": 421,
+        "name": "Slovakia"
+    },
+    {
+        "iso": 1705,
+        "iso_ccode": "SI",
+        "iso_prefix": 386,
+        "name": "Slovenia"
+    },
+    {
+        "iso": 1090,
+        "iso_ccode": "SB",
+        "iso_prefix": 677,
+        "name": "Solomon Islands"
+    },
+    {
+        "iso": 1706,
+        "iso_ccode": "SO",
+        "iso_prefix": 252,
+        "name": "Somalia"
+    },
+    {
+        "iso": 1710,
+        "iso_ccode": "ZA",
+        "iso_prefix": 27,
+        "name": "South Africa"
+    },
+    {
+        "iso": 1410,
+        "iso_ccode": "KR",
+        "iso_prefix": 82,
+        "name": "South Korea"
+    },
+    {
+        "iso": 1728,
+        "iso_ccode": "SS",
+        "iso_prefix": 211,
+        "name": "South Sudan"
+    },
+    {
+        "iso": 1724,
+        "iso_ccode": "ES",
+        "iso_prefix": 34,
+        "name": "Spain"
+    },
+    {
+        "iso": 1144,
+        "iso_ccode": "LK",
+        "iso_prefix": 94,
+        "name": "Sri Lanka"
+    },
+    {
+        "iso": 1729,
+        "iso_ccode": "SD",
+        "iso_prefix": 249,
+        "name": "Sudan"
+    },
+    {
+        "iso": 1740,
+        "iso_ccode": "SR",
+        "iso_prefix": 597,
+        "name": "Suriname"
+    },
+    {
+        "iso": 1744,
+        "iso_ccode": "SJ",
+        "iso_prefix": 47,
+        "name": "Svalbard and Jan Mayen"
+    },
+    {
+        "iso": 1748,
+        "iso_ccode": "SZ",
+        "iso_prefix": 268,
+        "name": "Swaziland"
+    },
+    {
+        "iso": 1752,
+        "iso_ccode": "SE",
+        "iso_prefix": 46,
+        "name": "Sweden"
+    },
+    {
+        "iso": 1756,
+        "iso_ccode": "CH",
+        "iso_prefix": 41,
+        "name": "Switzerland"
+    },
+    {
+        "iso": 1760,
+        "iso_ccode": "SY",
+        "iso_prefix": 963,
+        "name": "Syria"
+    },
+    {
+        "iso": 1158,
+        "iso_ccode": "TW",
+        "iso_prefix": 886,
+        "name": "Taiwan"
+    },
+    {
+        "iso": 1762,
+        "iso_ccode": "TJ",
+        "iso_prefix": 992,
+        "name": "Tajikistan"
+    },
+    {
+        "iso": 1834,
+        "iso_ccode": "TZ",
+        "iso_prefix": 255,
+        "name": "Tanzania"
+    },
+    {
+        "iso": 1764,
+        "iso_ccode": "TH",
+        "iso_prefix": 66,
+        "name": "Thailand"
+    },
+    {
+        "iso": 1768,
+        "iso_ccode": "TG",
+        "iso_prefix": 228,
+        "name": "Togo"
+    },
+    {
+        "iso": 1772,
+        "iso_ccode": "TK",
+        "iso_prefix": 690,
+        "name": "Tokelau"
+    },
+    {
+        "iso": 1776,
+        "iso_ccode": "TO",
+        "iso_prefix": 676,
+        "name": "Tonga"
+    },
+    {
+        "iso": 1780,
+        "iso_ccode": "TT",
+        "iso_prefix": 1868,
+        "name": "Trinidad and Tobago"
+    },
+    {
+        "iso": 1788,
+        "iso_ccode": "TN",
+        "iso_prefix": 216,
+        "name": "Tunisia"
+    },
+    {
+        "iso": 1792,
+        "iso_ccode": "TR",
+        "iso_prefix": 90,
+        "name": "Turkey"
+    },
+    {
+        "iso": 1795,
+        "iso_ccode": "TM",
+        "iso_prefix": 993,
+        "name": "Turkmenistan"
+    },
+    {
+        "iso": 1796,
+        "iso_ccode": "TC",
+        "iso_prefix": 1649,
+        "name": "Turks and Caicos Islands"
+    },
+    {
+        "iso": 1798,
+        "iso_ccode": "TV",
+        "iso_prefix": 688,
+        "name": "Tuvalu"
+    },
+    {
+        "iso": 1850,
+        "iso_ccode": "VI",
+        "iso_prefix": 1340,
+        "name": "U.S. Virgin Islands"
+    },
+    {
+        "iso": 1800,
+        "iso_ccode": "UG",
+        "iso_prefix": 256,
+        "name": "Uganda"
+    },
+    {
+        "iso": 1804,
+        "iso_ccode": "UA",
+        "iso_prefix": 380,
+        "name": "Ukraine"
+    },
+    {
+        "iso": 1784,
+        "iso_ccode": "AE",
+        "iso_prefix": 971,
+        "name": "United Arab Emirates"
+    },
+    {
+        "iso": 1826,
+        "iso_ccode": "GB",
+        "iso_prefix": 44,
+        "name": "United Kingdom"
+    },
+    {
+        "iso": 1840,
+        "iso_ccode": "US",
+        "iso_prefix": 1,
+        "name": "United States"
+    },
+    {
+        "iso": 1858,
+        "iso_ccode": "UY",
+        "iso_prefix": 598,
+        "name": "Uruguay"
+    },
+    {
+        "iso": 1860,
+        "iso_ccode": "UZ",
+        "iso_prefix": 998,
+        "name": "Uzbekistan"
+    },
+    {
+        "iso": 1548,
+        "iso_ccode": "VU",
+        "iso_prefix": 678,
+        "name": "Vanuatu"
+    },
+    {
+        "iso": 1336,
+        "iso_ccode": "VA",
+        "iso_prefix": 379,
+        "name": "Vatican"
+    },
+    {
+        "iso": 1862,
+        "iso_ccode": "VE",
+        "iso_prefix": 58,
+        "name": "Venezuela"
+    },
+    {
+        "iso": 1704,
+        "iso_ccode": "VN",
+        "iso_prefix": 84,
+        "name": "Vietnam"
+    },
+    {
+        "iso": 1876,
+        "iso_ccode": "WF",
+        "iso_prefix": 681,
+        "name": "Wallis and Futuna"
+    },
+    {
+        "iso": 1732,
+        "iso_ccode": "EH",
+        "iso_prefix": 212,
+        "name": "Western Sahara"
+    },
+    {
+        "iso": 1887,
+        "iso_ccode": "YE",
+        "iso_prefix": 967,
+        "name": "Yemen"
+    },
+    {
+        "iso": 1894,
+        "iso_ccode": "ZM",
+        "iso_prefix": 260,
+        "name": "Zambia"
+    },
+    {
+        "iso": 1716,
+        "iso_ccode": "ZW",
+        "iso_prefix": 263,
+        "name": "Zimbabwe"
+    }
+]

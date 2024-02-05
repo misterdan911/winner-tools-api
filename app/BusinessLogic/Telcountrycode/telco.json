@@ -1,0 +1,64 @@
+[{
+        "mno_id": 1,
+        "mno_shortname": "tsel",
+        "mno_fullname": "TELKOMSEL",
+        "iso_ccode": "ID",
+        "mno_prefix": "811,812,813,821,822,823,852,853,851"
+    },
+    {
+        "mno_id": 2,
+        "mno_shortname": "isat",
+        "mno_fullname": "INDOSAT",
+        "iso_ccode": "ID",
+        "mno_prefix": "855,856,857,858,814,815,816"
+    },
+    {
+        "mno_id": 3,
+        "mno_shortname": "xl",
+        "mno_fullname": "XL AXIATA",
+        "iso_ccode": "ID",
+        "mno_prefix": "817,818,819,859,877,878,838,831,832,833"
+    },
+    {
+        "mno_id": 4,
+        "mno_shortname": "three",
+        "mno_fullname": "HUTCHINSON",
+        "iso_ccode": "ID",
+        "mno_prefix": "895,896,897,898,899"
+    },
+    {
+        "mno_id": 5,
+        "mno_shortname": "smart",
+        "mno_fullname": "SMARTFREN",
+        "iso_ccode": "ID",
+        "mno_prefix": "881,882,883,884,885,886,887,888,889"
+    },
+    {
+        "mno_id": 12,
+        "mno_shortname": "ais",
+        "mno_fullname": "AIS",
+        "iso_ccode": "TH",
+        "mno_prefix": "61,62,63,65,800,801,802,806,807,810,811,812,817,818,819,82,84,854,87,901,92,931,935,936,98,989"
+    },
+    {
+        "mno_id": 21,
+        "mno_shortname": "jazz",
+        "mno_fullname": "JAZZ",
+        "iso_ccode": "PK",
+        "mno_prefix": "300,301,302,303,304,305,306,307,308,309"
+    },
+    {
+        "mno_id": 27,
+        "mno_shortname": "zong",
+        "mno_fullname": "ZONG",
+        "iso_ccode": "PK",
+        "mno_prefix": "310,311,312,313,314,315,316,317"
+    },
+    {
+        "mno_id": 49,
+        "mno_shortname": "telenor",
+        "mno_fullname": "TELENOR",
+        "iso_ccode": "PK",
+        "mno_prefix": "340,341,342,343,344,345,346,347,348,349"
+    }
+]
