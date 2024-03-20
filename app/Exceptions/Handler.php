@@ -10,6 +10,7 @@ use Illuminate\Validation\ValidationException;
 use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
 use PDOException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -52,10 +53,20 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $e)
     {
+        // return parent::render($request, $e);
+
         $statusCode = 400;
         $responseMsg = $e->getMessage();
 
-        if ($e instanceof \ErrorException)
+        if ($e instanceof NotFoundHttpException)
+        {
+            $statusCode = 404;
+
+            if (ENV('APP_DEBUG') == false) {
+                $responseMsg = "The server returned a '404 Not Found'";
+            }
+        }
+        elseif ($e instanceof \ErrorException)
         {
             $statusCode = 500;
 
@@ -76,8 +87,6 @@ class Handler extends ExceptionHandler
         $response = [ 'message' => $responseMsg ];
         
         return response($response, $statusCode);
-
-        // return parent::render($request, $exception);
     }
 
     protected function getExceptionDetail(\Exception $e)
