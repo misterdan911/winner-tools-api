@@ -22,7 +22,7 @@ class WinnerController extends Controller
         }
         */
 
-        $app = $req->app;
+        $app = $req->app_codename;
 
         $availableApp = [
             'mvicall',
@@ -56,16 +56,16 @@ class WinnerController extends Controller
 
         $sql = "
         SELECT
-            u.msisdn,
+            c.msisdn,
             p.point,
             mgm.point AS mgm_point,
-            ( p.point + mgm.point ) AS total_point 
+            ( p.point + mgm.point ) AS total_point
         FROM
-            users u
-            LEFT JOIN ( SELECT msisdn, sum( point ) AS point FROM points GROUP BY msisdn ) p ON p.msisdn = u.msisdn
-            LEFT JOIN member_get_members mgm ON mgm.msisdn = u.msisdn 
+            callers c
+            LEFT JOIN ( SELECT msisdn, sum( point ) AS point FROM points GROUP BY msisdn ) p ON p.msisdn = c.msisdn
+            LEFT JOIN member_get_members mgm ON mgm.msisdn = c.msisdn 
         WHERE
-            u.msisdn NOT IN ( $notInMsisdn ) AND
+            c.msisdn NOT IN ( $notInMsisdn ) AND
             ( p.point + mgm.point ) IS NOT NULL AND
             ( p.point + mgm.point ) > 0
         ORDER BY total_point DESC
@@ -80,9 +80,39 @@ class WinnerController extends Controller
 
         foreach($result as $r)
         {
+            $msisdn = $r->msisdn;
+
+            // dapatkan service dengan point tertinggi
+            $sql = "SELECT msisdn, point, program FROM points WHERE msisdn = $msisdn ORDER BY point DESC limit 1";
+            $rsPoint = DB::connection('mvicall')->select($sql);
+            $service = $rsPoint[0]->program;
+
+            // point detail
+            $pointDetail = [];
+            $sql = "SELECT SUM(point) as point, program FROM points WHERE msisdn = $msisdn GROUP BY program";
+            $rsPoint = DB::connection('mvicall')->select($sql);
+
+            foreach($rsPoint as $rw) {
+                $pointDetail[] = [
+                    'origin' => $rw->program,
+                    'point' => $rw->point,
+                ];
+            }
+
+            // get point from mgm
+            $sql = "SELECT point FROM member_get_members WHERE msisdn = $msisdn limit 1";
+            $rsMgm = DB::connection('mvicall')->select($sql);
+            $rw = $rsMgm[0];
+            $pointDetail[] = [
+                'origin' => 'Member Get Member',
+                'point' => $rw->point,
+            ];
+
             $data[] = [
-                'msisdn' => $r->msisdn,
+                'msisdn' => $msisdn,
                 'point' => $r->total_point,
+                'service' => $service,
+                'point_detail' => $pointDetail,
             ];
         }
 
