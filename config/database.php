@@ -83,6 +83,22 @@ return [
             'timezone' => env('DB_MVICALL_TIMEZONE', '+00:00'),
         ],
 
+        'msg_core' => [
+            'driver' => 'mysql',
+            'host' => env('DB_MSG_CORE_HOST', '127.0.0.1'),
+            'port' => env('DB_MSG_CORE_PORT', 3306),
+            'database' => env('DB_MSG_CORE_DATABASE', 'forge'),
+            'username' => env('DB_MSG_CORE_USERNAME', 'forge'),
+            'password' => env('DB_MSG_CORE_PASSWORD', ''),
+            'unix_socket' => env('DB_MSG_CORE_SOCKET', ''),
+            'charset' => env('DB_MSG_CORE_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_MSG_CORE_COLLATION', 'utf8mb4_unicode_ci'),
+            'prefix' => env('DB_MSG_CORE_PREFIX', ''),
+            'strict' => env('DB_MSG_CORE_STRICT_MODE', true),
+            'engine' => env('DB_MSG_CORE_ENGINE', null),
+            'timezone' => env('DB_MSG_CORE_TIMEZONE', '+00:00'),
+        ],
+
 
     ],
 

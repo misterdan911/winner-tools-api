@@ -119,6 +119,7 @@ class WinnerController extends Controller
         return $data;
     }
 
+    /*
     public function getWinnerOld(Request $req)
     {
         $rules = ['service_alias' => 'required'];
@@ -244,5 +245,6 @@ class WinnerController extends Controller
 
         return $data;
     }
+    */
 
 }
