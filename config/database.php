@@ -51,20 +51,20 @@ return [
             'timezone' => env('DB_TIMEZONE', '+00:00'),
         ],
 
-        'coregame' => [
+        'coregames' => [
             'driver' => 'mysql',
-            'host' => env('DB_COREGAME_HOST', '127.0.0.1'),
-            'port' => env('DB_COREGAME_PORT', 3306),
-            'database' => env('DB_COREGAME_DATABASE', 'forge'),
-            'username' => env('DB_COREGAME_USERNAME', 'forge'),
-            'password' => env('DB_COREGAME_PASSWORD', ''),
-            'unix_socket' => env('DB_COREGAME_SOCKET', ''),
-            'charset' => env('DB_COREGAME_CHARSET', 'utf8mb4'),
-            'collation' => env('DB_COREGAME_COLLATION', 'utf8mb4_unicode_ci'),
-            'prefix' => env('DB_COREGAME_PREFIX', ''),
-            'strict' => env('DB_COREGAME_STRICT_MODE', true),
-            'engine' => env('DB_COREGAME_ENGINE', null),
-            'timezone' => env('DB_COREGAME_TIMEZONE', '+00:00'),
+            'host' => env('DB_COREGAMES_HOST', '127.0.0.1'),
+            'port' => env('DB_COREGAMES_PORT', 3306),
+            'database' => env('DB_COREGAMES_DATABASE', 'forge'),
+            'username' => env('DB_COREGAMES_USERNAME', 'forge'),
+            'password' => env('DB_COREGAMES_PASSWORD', ''),
+            'unix_socket' => env('DB_COREGAMES_SOCKET', ''),
+            'charset' => env('DB_COREGAMES_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_COREGAMES_COLLATION', 'utf8mb4_unicode_ci'),
+            'prefix' => env('DB_COREGAMES_PREFIX', ''),
+            'strict' => env('DB_COREGAMES_STRICT_MODE', true),
+            'engine' => env('DB_COREGAMES_ENGINE', null),
+            'timezone' => env('DB_COREGAMES_TIMEZONE', '+00:00'),
         ],
 
         'mvicall' => [
