@@ -67,6 +67,22 @@ return [
             'timezone' => env('DB_COREGAMES_TIMEZONE', '+00:00'),
         ],
 
+        'coregames_timobile' => [
+            'driver' => 'mysql',
+            'host' => env('DB_COREGAMES_TiMOBILE_HOST', '127.0.0.1'),
+            'port' => env('DB_COREGAMES_TiMOBILE_PORT', 3306),
+            'database' => env('DB_COREGAMES_TiMOBILE_DATABASE', 'forge'),
+            'username' => env('DB_COREGAMES_TiMOBILE_USERNAME', 'forge'),
+            'password' => env('DB_COREGAMES_TiMOBILE_PASSWORD', ''),
+            'unix_socket' => env('DB_COREGAMES_TiMOBILE_SOCKET', ''),
+            'charset' => env('DB_COREGAMES_TiMOBILE_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_COREGAMES_TiMOBILE_COLLATION', 'utf8mb4_unicode_ci'),
+            'prefix' => env('DB_COREGAMES_TiMOBILE_PREFIX', ''),
+            'strict' => env('DB_COREGAMES_TiMOBILE_STRICT_MODE', true),
+            'engine' => env('DB_COREGAMES_TiMOBILE_ENGINE', null),
+            'timezone' => env('DB_COREGAMES_TiMOBILE_TIMEZONE', '+00:00'),
+        ],
+
         'mvicall' => [
             'driver' => 'mysql',
             'host' => env('DB_MVICALL_HOST', '127.0.0.1'),

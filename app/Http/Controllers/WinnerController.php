@@ -27,6 +27,9 @@ class WinnerController extends Controller
         $availableApp = [
             'mvicall',
             'serbahoki',
+            'ulartenggo',
+            'balaphoki',
+            'pantura'
         ];
 
         if (!in_array($app, $availableApp)) {
@@ -37,7 +40,13 @@ class WinnerController extends Controller
             $data = $this->getWinnerMvicall($req);
         }
         elseif ($app == 'serbahoki') {
-            $data = $this->getWinnerSerbahoki($req);
+            $data = $this->getWinnerCoregames($req, 13);
+        }
+        elseif ($app == 'ulartenggo') {
+            $data = $this->getWinnerCoregames($req, 3);
+        }
+        elseif ($app == 'balaphoki') {
+            $data = $this->getWinnerCoregamesTimobile($req);
         }
 
         $response = [ 'data' => $data ];
@@ -48,7 +57,7 @@ class WinnerController extends Controller
     private function getWinnerMvicall(Request $req)
     {
         $limit = $req->amount_requested;
-        // $limitBuffer = $limit * 1;
+        $limitBuffer = $limit * env('LIMIT_MULTIPLIER');
 
         $arrMsisdn = $req->excluded_msisdn;
 
@@ -73,10 +82,10 @@ class WinnerController extends Controller
             ( p.point + mgm.point ) IS NOT NULL AND
             ( p.point + mgm.point ) > 0
         ORDER BY total_point DESC
-        LIMIT $limit
-        ";
+        LIMIT $limitBuffer
+        ";  
 
-        // Log::debug($sql);
+        Log::debug($sql);
 
         $result = DB::connection('mvicall')->select($sql);
 
@@ -87,9 +96,22 @@ class WinnerController extends Controller
             $msisdn = $r->msisdn;
 
             // dapatkan service dengan point tertinggi
-            $sql = "SELECT msisdn, point, program FROM points WHERE msisdn = $msisdn ORDER BY point DESC limit 1";
+            $sql = "SELECT msisdn, point, program FROM points WHERE msisdn = $msisdn ORDER BY point DESC";
             $rsPoint = DB::connection('mvicall')->select($sql);
-            $service = $rsPoint[0]->program;
+
+            if (empty($rsPoint)) { continue; }
+
+            // cek servicenya ada yg dari telco apa enggak
+            $service = "";
+            $mvicallExcludeService = explode(',', env('MVICALL_EXCLUDE_SERVICE'));
+
+            foreach($rsPoint as $rw) {
+                if (in_array($rw->program, $mvicallExcludeService)) { continue; }
+                $service = $rw->program;
+            }
+
+            // kalo gak ada service yg dari telco, maka msisdn ini gak terpilih jadi kandidat winner
+            if (empty($service)) { continue; }
 
             // point detail
             $pointDetail = [];
@@ -112,8 +134,11 @@ class WinnerController extends Controller
                 'point' => $rw->point,
             ];
 
+            $telco = Telcountrycode::getTelco($msisdn);
+
             $data[] = [
                 'msisdn' => $msisdn,
+                'telco_id' => $telco['mno_id'],
                 'point' => $r->total_point,
                 'service' => $service,
                 'point_detail' => $pointDetail,
@@ -123,10 +148,10 @@ class WinnerController extends Controller
         return $data;
     }
 
-    private function getWinnerSerbahoki(Request $req)
+    private function getWinnerCoregames(Request $req, $appId)
     {
         $limit = $req->amount_requested;
-        // $limitBuffer = $limit * 1;
+        $limitBuffer = $limit * env('LIMIT_MULTIPLIER');
 
         $arrMsisdn = $req->excluded_msisdn;
 
@@ -139,14 +164,224 @@ class WinnerController extends Controller
         $sql = "
         SELECT * FROM leaderboard
         WHERE
-            app_id = 13 AND
+            app_id = $appId AND
             msisdn not in ($notInMsisdn)
-        ORDER BY point DESC LIMIT $limit
+        ORDER BY point DESC LIMIT $limitBuffer
         ";
 
         // Log::debug($sql);
+        // die($sql);
 
         $result = DB::connection('coregames')->select($sql);
+
+        $data = [];
+
+        foreach($result as $r)
+        {
+            $totalPoint = 0;
+            $msisdn = $r->msisdn;
+
+            // dapatkan service dengan point tertinggi
+            $sql = "
+            SELECT
+                msisdn,
+                SUM(point) as point,
+                keyword
+            FROM loyalti_points
+            WHERE
+                msisdn = $msisdn AND
+                app_id = $appId
+            GROUP BY keyword, msisdn
+            ORDER BY point DESC limit 1";
+
+            $rsPoint = DB::connection('coregames')->select($sql);
+
+            if (!empty($rsPoint)) {
+                $service = $rsPoint[0]->keyword;
+            } else {
+                // $service = "Not Available";
+                continue;
+            }
+
+            // point detail - loyalti_points
+            $pointDetail = [];
+            $sql = "SELECT SUM(point) as point, keyword FROM loyalti_points WHERE msisdn = $msisdn AND app_id = $appId GROUP BY keyword";
+            $rsPoint = DB::connection('coregames')->select($sql);
+
+            foreach($rsPoint as $rw)
+            {
+                if ($rw->point == 0) { continue; }
+
+                $pointDetail[] = [
+                    'origin' => $rw->keyword,
+                    'point' => $rw->point,
+                ];
+
+                $totalPoint += $rw->point;
+            }
+
+            // point detail - points
+            $sql = "SELECT SUM(point) as point FROM points WHERE fake_id = " . crc32($msisdn) . " AND app_id = $appId";
+            $rsPoint = DB::connection('coregames')->select($sql);
+
+            foreach($rsPoint as $rw)
+            {
+                if (empty(trim($rw->point))) { continue; }
+
+                $pointDetail[] = [
+                    'origin' => "Game Point",
+                    'point' => $rw->point,
+                ];
+
+                $totalPoint += $rw->point;
+            }
+
+            // Kalau total point di leaderboard dan di loyalti_points + points tidak match, skip
+            if ($r->point !== $totalPoint) { continue; }
+
+            $data[] = [
+                'msisdn' => $msisdn,
+                'telco_id' => $r->op_id,
+                'point' => $r->point,
+                'service' => $service,
+                'point_detail' => $pointDetail,
+            ];
+        }
+
+        return $data;
+    }
+
+    private function getWinnerCoregamesTimobile(Request $req)
+    {
+        $limit = $req->amount_requested;
+        $limitBuffer = $limit * env('LIMIT_MULTIPLIER');
+
+        $arrMsisdn = $req->excluded_msisdn;
+
+        if (empty($arrMsisdn)) {
+            $notInMsisdn = 0;
+        } else {
+            $notInMsisdn = implode(',', $arrMsisdn);
+        }
+
+        $sql = "
+        SELECT * FROM leaderboard
+        WHERE
+            msisdn not in ($notInMsisdn)
+        ORDER BY point DESC LIMIT $limitBuffer
+        ";
+
+        // Log::debug($sql);
+        // die($sql);
+
+        $result = DB::connection('coregames_timobile')->select($sql);
+
+        $data = [];
+
+        foreach($result as $r)
+        {
+            $totalPoint = 0;
+            $msisdn = $r->msisdn;
+
+            // dapatkan service dengan point tertinggi
+            $sql = "
+            SELECT
+                msisdn,
+                SUM(point) as point,
+                keyword
+            FROM loyalti_points
+            WHERE
+                msisdn = $msisdn 
+            GROUP BY keyword, msisdn
+            ORDER BY point DESC limit 1";
+
+            $rsPoint = DB::connection('coregames_timobile')->select($sql);
+
+            if (!empty($rsPoint)) {
+                $service = $rsPoint[0]->keyword;
+            } else {
+                // $service = "Not Available";
+                continue;
+            }
+
+            // point detail - loyalti_points
+            $pointDetail = [];
+            $sql = "SELECT SUM(point) as point, keyword FROM loyalti_points WHERE msisdn = $msisdn GROUP BY keyword";
+            $rsPoint = DB::connection('coregames_timobile')->select($sql);
+
+            foreach($rsPoint as $rw)
+            {
+                if ($rw->point == 0) { continue; }
+
+                $pointDetail[] = [
+                    'origin' => $rw->keyword,
+                    'point' => $rw->point,
+                ];
+
+                $totalPoint += $rw->point;
+            }
+
+            // point detail - points
+            $sql = "SELECT SUM(point) as point FROM points WHERE fake_id = " . crc32($msisdn);
+            $rsPoint = DB::connection('coregames_timobile')->select($sql);
+
+            // Log::debug("msisdn: " . $msisdn);
+            // Log::debug("msisdn_crc32: " . crc32($msisdn));
+            // Log::debug($sql);
+
+            foreach($rsPoint as $rw)
+            {
+                if (empty(trim($rw->point))) { continue; }
+
+                $pointDetail[] = [
+                    'origin' => "Game Point",
+                    'point' => $rw->point,
+                ];
+
+                $totalPoint += $rw->point;
+            }
+
+            // Kalau total point di leaderboard dan di loyalti_points + points tidak match, skip
+            if ($r->point !== $totalPoint) { continue; }
+
+            $data[] = [
+                'msisdn' => $msisdn,
+                'telco_id' => $r->op_id,
+                'point' => $r->point,
+                'service' => $service,
+                'point_detail' => $pointDetail,
+            ];
+        }
+
+        return $data;
+    }
+
+
+    /*
+    private function getWinnerCoregamesTimobile(Request $req)
+    {
+        $limit = $req->amount_requested;
+        $limitBuffer = $limit * env('LIMIT_MULTIPLIER');
+
+        $arrMsisdn = $req->excluded_msisdn;
+
+        if (empty($arrMsisdn)) {
+            $notInMsisdn = 0;
+        } else {
+            $notInMsisdn = implode(',', $arrMsisdn);
+        }
+
+        $sql = "
+        SELECT * FROM leaderboard
+        WHERE
+            msisdn not in ($notInMsisdn)
+        ORDER BY point DESC LIMIT $limitBuffer
+        ";
+
+        // Log::debug($sql);
+        // Log::debug("Leaderboard");
+
+        $result = DB::connection('coregames_timobile')->select($sql);
 
         $data = [];
 
@@ -165,7 +400,8 @@ class WinnerController extends Controller
             GROUP BY keyword, msisdn
             ORDER BY point DESC limit 1";
 
-            $rsPoint = DB::connection('coregames')->select($sql);
+            // Log::debug("Service point tertinggi");
+            $rsPoint = DB::connection('coregames_timobile')->select($sql);
 
             if (!empty($rsPoint)) {
                 $service = $rsPoint[0]->keyword;
@@ -176,9 +412,13 @@ class WinnerController extends Controller
             // point detail - loyalti_points
             $pointDetail = [];
             $sql = "SELECT SUM(point) as point, keyword FROM loyalti_points WHERE msisdn = $msisdn GROUP BY keyword";
-            $rsPoint = DB::connection('coregames')->select($sql);
+            // Log::debug("point detail - loyalti_points");
+            $rsPoint = DB::connection('coregames_timobile')->select($sql);
 
-            foreach($rsPoint as $rw) {
+            foreach($rsPoint as $rw)
+            {
+                if ($rw->point == 0) { continue; }
+
                 $pointDetail[] = [
                     'origin' => $rw->keyword,
                     'point' => $rw->point,
@@ -187,9 +427,13 @@ class WinnerController extends Controller
 
             // point detail - points
             $sql = "SELECT SUM(point) as point FROM points WHERE fake_id = " . crc32($msisdn);
-            $rsPoint = DB::connection('coregames')->select($sql);
+            // Log::debug("point detail - points");
+            $rsPoint = DB::connection('coregames_timobile')->select($sql);
 
-            foreach($rsPoint as $rw) {
+            foreach($rsPoint as $rw)
+            {
+                if (empty(trim($rw->point))) { continue; }
+
                 $pointDetail[] = [
                     'origin' => "Game Point",
                     'point' => $rw->point,
@@ -198,6 +442,7 @@ class WinnerController extends Controller
 
             $data[] = [
                 'msisdn' => $msisdn,
+                'telco_id' => $r->op_id,
                 'point' => $r->point,
                 'service' => $service,
                 'point_detail' => $pointDetail,
@@ -206,6 +451,8 @@ class WinnerController extends Controller
 
         return $data;
     }
+    */
+
 
     /*
     public function getWinnerOld(Request $req)
